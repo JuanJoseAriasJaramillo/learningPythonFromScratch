@@ -1,0 +1,21 @@
+En jupiter usamos este codigo
+import pandas as pd
+df = pd.read_csv('deportes.csv') #pandas
+
+df #nos permite graficar que hay dentro del csv
+df.value
+df
+
+Se utilizan DATASETS de la pagina https://www.kaggle.com/datasets
+
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+dataset = pd.read_csv('deportes.csv') #pandas
+inputs = dataset.drop(columns=['deporte'])
+outputs = dataset['deporte']
+
+
+modelo = DecisionTreeClassifier()
+modelo.fit(inputs, outputs)
+predicciones = modelo.predict([ [1, 24], [2, 33] ])
+predicciones
